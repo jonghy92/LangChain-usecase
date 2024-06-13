@@ -1,4 +1,4 @@
-## RAG - Retriever 정리글
+## LangChain - RAG | LLM - 정리글
 
 Date : 2024-06-12
 
