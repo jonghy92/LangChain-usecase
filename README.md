@@ -8,17 +8,26 @@ Date : 2024-06-12
 **Key Points:**
 
 >RAG - Retrievers: <br>
+>
+>0. **Document-Setting-LLM:** <br>
+> Text data를 LLM 및 retriever가 이해할 수 있도록 Document 데이터로 구축.
+>
 >1. **Multi-Query Retriever:** <br>
 > 잘 모르는 상태에서 대충 질문하여도 좋은 답변을 받을 수 있음.
 >  
 >2. **Parent-Document Retriever:** <br>
 > 앞, 뒤 문맥을 잘 담아서 답변을 받을 수 있음.
 >
->3. **Self-Querying Retriever** <br>
+>3. **Self-Querying Retriever:** <br>
 > 쿼리같이 문서의 메타정보를 활용필터하여 답변을 받을 수 있음.
 >
->4. **Time-Weighted Retriever** <br>
+>4. **Time-Weighted Retriever:** <br>
 > 오래된 자료는 덜 참고하고 답변을 최신화하여 받을 수 있음.
+> 
+>5. **LLM PromptTemplate & LLM Retriever PromptTemplate Settings:** <br>
+> LLM 단독 Prompts 세팅 및 Retriever 포함 2가지 Prompts를 구축하여 보다 나은 답변을 받을 수 있음.
+
+
 
 <br>
 
@@ -30,7 +39,7 @@ Date : 2024-06-12
 <br>
 
 **본론:** <br>
-AWS에서 RAG의 대한 설명을 참조하면: <br>
+AWS에서 RAG의 대한 설명을 참조하자면... <br>
 RAG란? (검색 증강 생성 설명) 대규모 언어 모델의 출력을 최적화하여 응답을 생성하기 전에 학습 데이터 소스 외부의 신뢰할 수 있는 지식 베이스를 참조하게 하는 프로세스라고 함.
 
 대규모 언어 모델(LLM)은 방대한 양의 데이터를 기반으로 학습되며 수십억 개의 매개 변수를 사용하여 질문에 대한 답변, 언어 번역, 문장 완성과 같은 작업에 대한 독창적인 결과를 생성한다고 함.
@@ -58,5 +67,5 @@ RAG란? (검색 증강 생성 설명) 대규모 언어 모델의 출력을 최�
 
 **비고:** <br>
 간단하게 RAG (Retrieval-Augmented Generation) 시스템을 구축하는것은 어렵지 않음. <br>
-하지만 실제 프로젝트/프로덕트 개발을 위해 RAG & LLM 성능을 높이려면 고급 기법 활용 필요. 
+하지만 실제 프로젝트/프로덕트 개발을 위해 성능을 높이려면 RAG, LLM, LangChain, Prompt Engineering 등... 여러 기법을 적용/활용한 기술 필요. 
 
